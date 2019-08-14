@@ -115,7 +115,11 @@ const data = [
 
 function articleCreator (article) {
   const div = document.createElement('div');
+  div.classList.add('article');
+
   const h2 = document.createElement('h2');
+  h2.textContent = article.title;
+  div.appendChild(h2);
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
   const p3 = document.createElement('p');
