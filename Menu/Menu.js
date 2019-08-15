@@ -33,3 +33,10 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+
+function menuCreator (item) {
+  const menuDiv = document.createElement('div')
+  menuDiv.classList.add('menu')
+  
+}

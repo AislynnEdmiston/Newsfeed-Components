@@ -114,15 +114,42 @@ const data = [
 */
 
 function articleCreator (article) {
+
   const div = document.createElement('div');
   div.classList.add('article');
 
   const h2 = document.createElement('h2');
   h2.textContent = article.title;
   div.appendChild(h2);
-  const p1 = document.createElement('p');
-  const p2 = document.createElement('p');
-  const p3 = document.createElement('p');
-  const span = document.createElement('span');
 
+  const date = document.createElement('p');
+  date.classList.add('date');
+  date.textContent = article.date;
+  div.appendChild(date);
+
+  const p1 = document.createElement('p');
+  p1.textContent = article.firstParagraph;
+  div.appendChild(p1);
+
+  const p2 = document.createElement('p');
+  p1.textContent = article.secondParagraph;
+  div.appendChild(p2);
+
+  const p3 = document.createElement('p');
+  p1.textContent = article.thirdParagraph;
+  div.appendChild(p3);
+
+  const span = document.createElement('span');
+  span.classList.add('expandButton');
+  span.textContent = 'expand';
+  div.appendChild(span);
+  span.addEventListener('click', () => div.classList.toggle('article-open'));
+
+  return div;
 }
+
+const articles = data.map(article => articleCreator(article));
+
+console.log(articles)
+
+document.querySelector('.articles').append(...articles);
