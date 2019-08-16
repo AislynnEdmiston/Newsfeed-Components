@@ -132,11 +132,11 @@ function articleCreator (article) {
   div.appendChild(p1);
 
   const p2 = document.createElement('p');
-  p1.textContent = article.secondParagraph;
+  p2.textContent = article.secondParagraph;
   div.appendChild(p2);
 
   const p3 = document.createElement('p');
-  p1.textContent = article.thirdParagraph;
+  p3.textContent = article.thirdParagraph;
   div.appendChild(p3);
 
   const span = document.createElement('span');
